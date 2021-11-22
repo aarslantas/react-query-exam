@@ -1,0 +1,19 @@
+{
+  "persons": [
+    {
+      "id": 1,
+      "name": "Abdurrahman",
+      "surname": "Arslantaş"
+    },
+    {
+      "id": 2,
+      "name": "Ömer Asım",
+      "surname": "Arslantaş"
+    },
+    {
+      "id": 3,
+      "name": "İsmaillllll",
+      "surname": "Mercan"
+    }
+  ]
+}
