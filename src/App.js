@@ -5,8 +5,11 @@ import PersonPage from "./components/Person";
 import HomePage from "./components/Home";
 import ReactQueryPage from "./components/React-query";
 import SinglePersonPage from "./components/SinglePerson";
+import ParallelQueriesPage from "./components/ParallelQueries";
 
 import "./App.css";
+import DynamicParallelQueries from "./components/DynamicParallelQueries";
+import DependentQueriesPage from "./components/DependentQueris";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +31,15 @@ function App() {
           </ul>
         </nav>
         <Routes>
+          <Route
+            path="/rq-dependent"
+            element={<DependentQueriesPage email="aarslantas@exam.com" />}
+          />
+          <Route
+            path="/rq-dynamic-parallel"
+            element={<DynamicParallelQueries personIds={[1, 3]} />}
+          />
+          <Route path="/rq-parallel" element={<ParallelQueriesPage />} />
           <Route path="/persons/:personId" element={<SinglePersonPage />} />
           <Route path="/react-query" element={<ReactQueryPage />} />
           <Route path="/person" element={<PersonPage />} />

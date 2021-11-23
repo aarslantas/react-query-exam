@@ -15,5 +15,34 @@
       "name": "İsmal",
       "surname": "Mercan"
     }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "name": "Mehmet",
+      "surname": "Arslantaş"
+    },
+    {
+      "id": 2,
+      "name": "İrsadi",
+      "surname": "Arslantaş"
+    },
+    {
+      "id": 3,
+      "name": "Ali",
+      "surname": "Mercan"
+    }
+  ],
+  "users": [
+    {
+      "id": "aarslantas@exam.com",
+      "channelId": "aarslantas"
+    }
+  ],
+  "channels": [
+    {
+      "id": "aarslantas",
+      "courses": ["react", "vue"]
+    }
   ]
 }
