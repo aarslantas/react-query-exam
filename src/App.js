@@ -32,7 +32,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
         </Routes>
       </Router>
-      <ReactQueryDevtools initialIsOpem={false} position="bottom-right" />
+      <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
     </QueryClientProvider>
   );
 }
