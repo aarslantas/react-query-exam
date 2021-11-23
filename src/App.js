@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import PersonPage from "./components/Person";
 import HomePage from "./components/Home";
 import ReactQueryPage from "./components/React-query";
+import SinglePersonPage from "./components/SinglePerson";
 
 import "./App.css";
 
@@ -27,6 +28,7 @@ function App() {
           </ul>
         </nav>
         <Routes>
+          <Route path="/persons/:personId" element={<SinglePersonPage />} />
           <Route path="/react-query" element={<ReactQueryPage />} />
           <Route path="/person" element={<PersonPage />} />
           <Route path="/" element={<HomePage />} />
