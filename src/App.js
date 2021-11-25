@@ -10,6 +10,7 @@ import ParallelQueriesPage from "./components/ParallelQueries";
 import "./App.css";
 import DynamicParallelQueries from "./components/DynamicParallelQueries";
 import DependentQueriesPage from "./components/DependentQueris";
+import PaginatedQueries from "./components/PaginatedQueries";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ function App() {
           </ul>
         </nav>
         <Routes>
+          <Route path="/rq-paginated" element={<PaginatedQueries />} />
           <Route
             path="/rq-dependent"
             element={<DependentQueriesPage email="aarslantas@exam.com" />}
