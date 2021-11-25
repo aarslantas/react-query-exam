@@ -14,6 +14,11 @@
       "id": 3,
       "name": "İsmal",
       "surname": "Mercan"
+    },
+    {
+      "name": "mehmet",
+      "surname": "ali",
+      "id": 4
     }
   ],
   "friends": [
@@ -42,17 +47,44 @@
   "channels": [
     {
       "id": "aarslantas",
-      "courses": ["react", "vue"]
+      "courses": [
+        "react",
+        "vue"
+      ]
     }
   ],
   "colors": [
-    { "id": 1, "label": "green" },
-    { "id": 2, "label": "red" },
-    { "id": 3, "label": "orange" },
-    { "id": 4, "label": "white" },
-    { "id": 5, "label": "black" },
-    { "id": 6, "label": "yellow" },
-    { "id": 7, "label": "purple" },
-    { "id": 8, "label": "blue" }
+    {
+      "id": 1,
+      "label": "green"
+    },
+    {
+      "id": 2,
+      "label": "red"
+    },
+    {
+      "id": 3,
+      "label": "orange"
+    },
+    {
+      "id": 4,
+      "label": "white"
+    },
+    {
+      "id": 5,
+      "label": "black"
+    },
+    {
+      "id": 6,
+      "label": "yellow"
+    },
+    {
+      "id": 7,
+      "label": "purple"
+    },
+    {
+      "id": 8,
+      "label": "blue"
+    }
   ]
 }
