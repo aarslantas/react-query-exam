@@ -19,14 +19,39 @@ export const usePersons = (onSuccess, onError) => {
 export const useAddPerson = () => {
   const queryClient = useQueryClient();
   return useMutation(addPerson, {
-    onSuccess: (data) => {
-      // queryClient.invalidateQueries("persons"); // persons'ı yeniden değerlendirdik ve güncel veriyi çektik
-      queryClient.setQueryData("persons", (oldQueryData) => {
-        return {
-          ...oldQueryData,
-          data: [...oldQueryData.data, data.data],
-        };
-      });
+    // onSuccess: (data) => {
+    //   // queryClient.invalidateQueries("persons"); // persons'ı yeniden değerlendirdik ve güncel veriyi çektik
+    //   queryClient.setQueryData("persons", (oldQueryData) => {
+    //     return {
+    //       ...oldQueryData,
+    //       data: [...oldQueryData.data, data.data],
+    //     };
+    //   });
+    // },
+    onMutate: async (newPerson) => {
+      queryClient.cancelQueries("persons");
+      const previousPersonData = queryClient.setQueryData(
+        "persons",
+        (oldQueryData) => {
+          return {
+            ...oldQueryData,
+            data: [
+              ...oldQueryData.data,
+              { id: oldQueryData?.data?.length + 1, ...newPerson },
+            ],
+          };
+        }
+      );
+
+      return {
+        previousPersonData,
+      };
+    },
+    onError: (_error, _person, context) => {
+      queryClient.setQueryData("persons", context.previousPersonData);
+    },
+    onSettled: () => {
+      queryClient.invalidateQueries("persons");
     },
   });
 };
